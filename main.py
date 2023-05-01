@@ -6,6 +6,8 @@ with open('config.json') as config_file:
     config = json.load(config_file)
 
 iteration = config['iteration']
+max_results_keyword = config['max_results_keyword']
+start_index_keyword = config['start_index_keyword']
 
 print(f'Feed Download Iteration {iteration}')
 
@@ -16,7 +18,7 @@ max_results = config['max_results']
 start_index = 0
 
 while True:
-    response = requests.get(config['blogger_url']+config['feed_url']+f'&max-results={max_results}'+(f'&start-index={start_index}' if start_index > 0 else ''))
+    response = requests.get(config['blogger_url']+config['feed_url']+f'&{max_results_keyword}={max_results}'+(f'&{start_index_keyword}={start_index}' if start_index > 0 else ''))
 
     response_encoding = json.detect_encoding(response.content)
     response_decoded = response.content.decode(response_encoding)
