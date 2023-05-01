@@ -1,8 +1,8 @@
 {
-	"blogger_url": "https://example.blogspot.com",
-	"feed_url": "/feeds/posts/default?alt=rss",
-	"iteration": 1,
-	"max_results": 150,
+  "blogger_url": "https://example.blogspot.com",
+  "feed_url": "/feeds/posts/default?alt=rss",
+  "iteration": 1,
+  "max_results": 150,
   "max_results_keyword": "max-results",
   "start_index_keyword": "start_index"
 }
